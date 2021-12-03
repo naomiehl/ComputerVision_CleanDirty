@@ -1,6 +1,9 @@
 # ComputerVision_CleanDirty
 
-Understanding if a scene is dirty or clean scenes is crucial for automatic assignment of cleaning trucks in cities. The primary goal of this project is to classify images as dirty or clean, interpret the results (i.e., why the classifier made this decision) and artificially remove the waste from the dirty scenes. The team will need image processing skills and work with 2D ConvNets and interpretability. 
+During the first quarantine in 2020 neighbors were worried about the garbage in the Montevideo container. The main objective of this project is to implement an AI that understands if a street is dirty or clean and interpret the results in order to request the automatic maintenance of cleaning trucks in the dirtiest streets. A CNN algorithm is used to classify the dirty and clean streets, and the Grad-Cam algorithm is used in a second step to visualize the waste to better understand which pixels of that image have contributed to the final output  of  the  model. 
+
+You can find the original Montevideo Container Dataset on Kaggle.
+![Dataset](DataSet.png)
 
 Dataset Clean dirty containers in Montevideo Kaggle link
 
