@@ -7,17 +7,12 @@ You can find the original Montevideo Container Dataset on Kaggle.
 
 Dataset Clean dirty containers in Montevideo Kaggle link
 
-**Task 1 Clean/dirty classification and analysis**:
-Train a classifier with clean/dirty images and evaluate the accuracy
-Failure case analysis: 
-FP, TP, FN, accuracy
-Visualization of all failure cases 
+## Clean/Dirty Classification with CNN
+The architecture of our network is summarized above.  It contains eight learned layers — fiveconvolutional  and  three  fully-connected.   We’ll first add a convolutional 2D layer with 32 filters, akernel of 3x3, the input size as our image dimen-sions, 256x256, and the activation as ReLU. More details on the code.
+![Classifier](Classifier.gif)
+Here is the result for an example panel found by the algorithm after 10 epochs for a batch size of 256
 
-**Task 2 Network interpretation**: 
-Localize garbage/waste in dirty image scenes using only image-level information using Class Activation Maps. 
-Consider visualizing the activation maps in several convolutional layers 
-
-**Task 3 Clean dirty city images**: 
-For this, use Cycle GAN and train it to clean dirty streets (remove the waste from images). You will create one two-fold model: one that removes waste, one that adds it.
-You will need two sets of images, one with and one without waste. 
-Visualize success and failure cases 
+## Network interpretation with Grad-Cam 
+In  this  section,   we’ll  show  how  we  interpretthe previous result usingClass Activation Maps(CAM), a powerful technique used in ComputerVision for classification tasks. It allows to inspectthe categorized image and understand which part-s/pixels of an image have contributed more to the final  output  of  the  model.
+![GradCam](GradCam.gif)
+The Grad-CAM heat-map now emphasizes the dirt, and de-emphasizes the trash and the background. Overall, we have a much more precise region of emphasis that locates the dirt. We know that the model classifies this image as dirty due to its intrinsic features, not a general region in the image. The techniques presented here helped us to provide more transparency and create more trust in models throughout the improvement process.
