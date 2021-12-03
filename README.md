@@ -14,5 +14,5 @@ Here is the result for an example panel found by the algorithm after 10 epochs f
 
 ## Network interpretation with Grad-Cam 
 In  this  section,   we’ll  show  how  we  interpretthe previous result usingClass Activation Maps(CAM), a powerful technique used in ComputerVision for classification tasks. It allows to inspectthe categorized image and understand which part-s/pixels of an image have contributed more to the final  output  of  the  model.
-![GradCam](GradCam.gif)
+![GradCam](GradCam.jpeg)
 The Grad-CAM heat-map now emphasizes the dirt, and de-emphasizes the trash and the background. Overall, we have a much more precise region of emphasis that locates the dirt. We know that the model classifies this image as dirty due to its intrinsic features, not a general region in the image. The techniques presented here helped us to provide more transparency and create more trust in models throughout the improvement process.
