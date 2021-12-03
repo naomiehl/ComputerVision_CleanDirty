@@ -9,8 +9,7 @@ Dataset Clean dirty containers in Montevideo Kaggle link
 
 ## Clean/Dirty Classification with CNN
 The architecture of our network is summarized above.  It contains eight learned layers — fiveconvolutional  and  three  fully-connected.   We’ll first add a convolutional 2D layer with 32 filters, akernel of 3x3, the input size as our image dimen-sions, 256x256, and the activation as ReLU. More details on the code.
-![This is an image](https://github.com/naomiehl/ComputerVision_CleanDirty/blob/main/Classification.mov =250x250)
-https://github.com/naomiehl/ComputerVision_CleanDirty/blob/main/Classification.mov
+![Classification](Classification.mov)
 Here is the result for an example panel found by the algorithm after 10 epochs for a batch size of 256
 
 ## Network interpretation with Grad-Cam 
